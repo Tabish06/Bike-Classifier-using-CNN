@@ -45,4 +45,4 @@ Returns an ouput whether its a road bike or a mountain bike
 # Output
 ![Output](https://github.com/Tabish06/Bike-Classifier-using-CNN/blob/master/images/2019-01-29%20(3).png)
 
-
+![Output](https://github.com/Tabish06/Bike-Classifier-using-CNN/blob/master/images/f6cda5cbba9f5ab71fee3ce6eec5e3b0.png)
