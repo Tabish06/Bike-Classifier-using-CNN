@@ -2,6 +2,7 @@
 Deep Learning Classification problem using Convolutional Neural Network.
 
 This Github links helps in classifying image as a mountain bike or a road bike.
+Add data to data folder divided in mountain bike and road bikes for training
 
 ## TensorBoard Graph
 ![TensorBoard Graph](https://github.com/Tabish06/Bike-Classifier-using-CNN/blob/master/images/2019-01-29%20(2).png) 
