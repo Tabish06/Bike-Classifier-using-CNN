@@ -41,7 +41,8 @@ def evaluate_with_path(image_path) :
     M = Model(mode = 'test')
 
     #Evaluate on test images:
-    print(f'Predicted {M.predict(X)}')
+    # print(f'Predicted {}')
+    return M.predict(X)
     
 
 if __name__ == '__main__':
@@ -64,7 +65,13 @@ if __name__ == '__main__':
 
     if len(args) == 1:
         # pdb.set_trace()
-        evaluate_with_path(args[0])
+        predicted = evaluate_with_path(args[0])
+        # cv2.namedWindow(predicted, cv2.WINDOW_NORMAL)
+        cv2.imshow(predicted,cv2.imread(args[0]))
+
+        # cv2.imshow(args[0],predicted)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
     else : 
         program_start = time.time()
         accuracy = evaluate()
