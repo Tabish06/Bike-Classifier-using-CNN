@@ -136,11 +136,12 @@ class Model :
 
     def predict(self,data) :
         self.load_previous_model()
-        predicted_value = np.argmax(self.loaded_model.predict(data),1)
+        predicted_class = self.loaded_model.predict(data)
+        predicted_value = np.argmax(predicted_class,1)
         # pdb.set_trace()
         for (key,value) in self.label_indices.items():
             if value == predicted_value[0] :
-                return key
+                return key,predicted_class[0][predicted_value]
 
 
 class TrainValTensorBoard(TensorBoard):

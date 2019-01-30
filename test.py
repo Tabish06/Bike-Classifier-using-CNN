@@ -65,9 +65,9 @@ if __name__ == '__main__':
 
     if len(args) == 1:
         # pdb.set_trace()
-        predicted = evaluate_with_path(args[0])
+        predicted,confidence = evaluate_with_path(args[0])
         # cv2.namedWindow(predicted, cv2.WINDOW_NORMAL)
-        cv2.imshow(predicted,cv2.imread(args[0]))
+        cv2.imshow(f'Prediction: {predicted} Confidence: {confidence[0]*100}',cv2.imread(args[0]))
 
         # cv2.imshow(args[0],predicted)
         cv2.waitKey(0)
