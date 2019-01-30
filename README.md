@@ -4,7 +4,7 @@ Deep Learning Classification problem using Convolutional Neural Network.
 This Github links helps in classifying image as a mountain bike or a road bike.
 
 ## TensorBoard Graph
-![TensorBoard Graph](https://1drv.ms/u/s!Ahzgp0Lh4mOip0D52Vtk512c0nqI) 
+![TensorBoard Graph](https://github.com/Tabish06/Bike-Classifier-using-CNN/blob/master/images/2019-01-29%20(2).png) 
 
 # Setup
 The Python 3 Anaconda Distribution is the easiest way to get going with the notebooks and code presented here.
@@ -29,6 +29,8 @@ python train.py
 # Testing the model
 All Images should be jpg format
 ## Testing from the folder
+This should be used for evaluating images for testing. So the images should be classified to calculate the testing accuracy
+
 ```
 python test.py
 ```
