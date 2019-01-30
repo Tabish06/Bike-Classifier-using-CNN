@@ -29,6 +29,8 @@ python train.py
 # Testing the model
 All Images should be jpg format
 ## Testing from the folder
+This should be used for evaluating images for testing. So the images should be classified to calculate the testing accuracy
+
 ```
 python test.py
 ```
