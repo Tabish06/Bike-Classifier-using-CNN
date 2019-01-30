@@ -42,5 +42,7 @@ python test.py -i file_path.jpg
 
 Returns an ouput whether its a road bike or a mountain bike
 
+# Output
+![Output](https://github.com/Tabish06/Bike-Classifier-using-CNN/blob/master/images/2019-01-29%20(3).png)
 
 
