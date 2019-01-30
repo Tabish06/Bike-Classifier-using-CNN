@@ -1,6 +1,5 @@
 ##
 ## data_loader.py
-## Load in brick/ball/cylinder examples for programming challenge.  
 ##
 
 
