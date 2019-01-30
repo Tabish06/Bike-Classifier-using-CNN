@@ -136,7 +136,6 @@ class Model :
 
     def predict(self,data) :
         self.load_previous_model()
-        self.label_indices = {'road_bikes': 0,'mountain_bikes':1}
         predicted_value = np.argmax(self.loaded_model.predict(data),1)
         # pdb.set_trace()
         for (key,value) in self.label_indices.items():
