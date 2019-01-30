@@ -5,3 +5,6 @@ Pillow
 pydotplus
 scikit-learn
 scipy
+keras
+tensorflow
+opencv-python

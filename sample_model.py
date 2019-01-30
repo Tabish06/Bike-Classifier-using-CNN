@@ -96,7 +96,7 @@ class Model :
                 data.train.X, data.train.y, batch_size=batch_size),    
             validation_data = test_datagen.flow(data.test.X,data.test.y,batch_size=batch_size),
             validation_steps=len(data.test.X) / batch_size,steps_per_epoch=len(data.train.X) / batch_size, 
-            epochs=epochs,callbacks=[TrainValTensorBoard(write_graph=False)])
+            epochs=epochs,callbacks=[TrainValTensorBoard(write_graph=True)])
 
         # model.fit(data.train.X, data.train.y,
         #           batch_size=batch_size,
