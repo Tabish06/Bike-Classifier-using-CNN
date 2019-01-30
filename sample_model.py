@@ -113,7 +113,7 @@ class Model :
         print('Test loss:', score[0])
         print('Test accuracy:', score[1])
 
-    def test(self,data):
+    def load_previous_model(self):
         model_json_file="model.json"
         model_weights_file= "weights.h5"
 
@@ -124,11 +124,24 @@ class Model :
         self.loaded_model.load_weights(model_weights_file)
         print("Model loaded from disk")
         self.loaded_model.summary()
+
+
+    def test(self,data):
+        self.load_previous_model()
         self.preds = self.loaded_model.predict(data.test.X)
         # pdb.set_trace()
         temp = sum(np.argmax(data.test.y,1) == np.argmax(self.preds,1))
         score = temp/len(data.test.y)
         return score
+
+    def predict(self,data) :
+        self.load_previous_model()
+        self.label_indices = {'road_bikes': 0,'mountain_bikes':1}
+        predicted_value = np.argmax(self.loaded_model.predict(data),1)
+        # pdb.set_trace()
+        for (key,value) in self.label_indices.items():
+            if value == predicted_value[0] :
+                return key
 
 
 class TrainValTensorBoard(TensorBoard):
